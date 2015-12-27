@@ -1,33 +1,29 @@
-#! /usr/bin/env python
+"""
+:Description:   Displays two histograms to show x and y histogram distributions
 
-# Header
+:Execute:
+                >>> python histogram_5_python
 
-'''
- NAME:                histograms_4_python
+:Inputs:        numpy random numbers
 
- DESCRIPTION:         Displays two histograms to show x and y histogram distributions.
+:Outputs:       histogram_5.pdf
 
- EXECUTION COMMAND:
-                      >>> histogram_4_python.py
- 
- INPUTS:              random input data
-                    
- OUTPUTS:             PDF file: python_plot.pdf
+:Autor:         Tommy Le Blanc
+                https://github.com/astrocaribe
 
+:Revisions:
+                - Written by Tommy LEBLANC, Dec 2012
+                - Tweaked plot display, Jul 2013
+                - Misc updates, Dec 2015
+"""
 
- AUTHOR:              Tommy LE BLANC
-                      Space Telescope Science Institute, USA 
- 
- REVISION HISTORY:
-                      * Written by Tommy LE BLANC, DEC 2012.
-                      * JUL 2013 - Tweaked plot display, updated header
-'''
 # Import necessary modules
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib.ticker import NullFormatter
 
 # Name output file
-psname = 'python_plot.ps'
+psName = '../plots/histogram_5.pdf'
 
 # Generate random input data
 np.random.seed(1)
@@ -55,7 +51,7 @@ binsize = 0.1
 num_y_bins = np.floor((max_y_data - min_y_data) / binsize)
 
 # Axes definitions
-nullfmt = plt.NullFormatter()
+nullfmt = NullFormatter()
 left, width = 0.1, 0.4
 bottom, height = 0.1, 0.4
 bottom_h = left_h = left + width + 0.02
@@ -95,4 +91,4 @@ axHistX.hist(x, num_x_bins, ec='green', fc='none', histtype='bar')
 axHistY.hist(y, num_y_bins, ec='green', fc='none', histtype='step', orientation='horizontal')
 
 # Save figure
-fig.savefig(psname)
+fig.savefig(psName)

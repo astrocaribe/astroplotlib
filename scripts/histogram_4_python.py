@@ -1,38 +1,33 @@
-#! /usr/bin/env python
+"""
+:Description:   Displays a bar plot
 
-# Header
+:Execute:
+                >>> python histogram_4_python
 
-'''
- NAME:                barplot_5_python
+:Inputs:        input data
 
- DESCRIPTION:         Displays a bar plot.
+:Outputs:       histogram_4.pdf
 
- EXECUTION COMMAND:
-                      >>> python barplot_5_python.py
- 
- INPUTS:              random input data
-                    
- OUTPUTS:             PDF file: python_plot.pdf
+:Autor:         Tommy Le Blanc
+                https://github.com/astrocaribe
 
-
- AUTHOR:              Tommy LE BLANC
-                      Space Telescope Science Institute, USA 
- 
- REVISION HISTORY:
-                      Written by Tommy LE BLANC, JUL 2013. 
-'''
+:Revisions:
+                - Written by Tommy LEBLANC, Dec 2012
+                - Tweaked plot display, Jul 2013
+                - Misc updates, Dec 2015
+"""
 
 # Import necessary modules
 import matplotlib.pyplot as plt
 import numpy as np
 
 # Name output file
-psname = 'python_plot.ps'
+psName = '../plots/histogram_4.pdf'
 
 # Create data and labels for the bar plot.
 data1 = [1, 0.6, 0.8]
 data2 = [0.85, 0.4, 0.95]
-labels = ['0.4 Z$_\odot$', '1 Z$_\odot$', '2.5 Z$_\odot$']   
+labels = ['0.4 Z$_\odot$', '1 Z$_\odot$', '2.5 Z$_\odot$']
 
 # Set up plot
 fig, ax = plt.subplots(figsize=(6, 6))
@@ -54,7 +49,7 @@ ax.set_ylabel('Normalized Frequency', size=18)
 ax.set_xticks(ind+width)
 ax.set_xticklabels(labels, size=18)
 for t in ax.get_yticklabels(): t.set_fontsize(18)
-    
+
 ax.annotate(' inner disk', xy=(1.15, 0.65),  xycoords='data',
             xytext=(1.15, 1.1), textcoords='data',
             arrowprops=dict(facecolor='black', width=0.1, headwidth=5),
@@ -70,4 +65,4 @@ ax.annotate(' outer galaxy', xy=(1.45, 0.45),  xycoords='data',
             )
 
 # Save figure
-fig.savefig(psname)
+fig.savefig(psName)
