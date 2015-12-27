@@ -2,7 +2,7 @@
 .DS_Store
 
 # iPython Notebook checkpoints
-.ipynp_checkpoints
+.ipynb_checkpoints/*
 
 # Misc files
 build/*
