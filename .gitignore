@@ -4,7 +4,6 @@
 # iPython Notebook checkpoints
 .ipynb_checkpoints/*.ipynb
 
-
 # Misc files
 build/*
 
