@@ -1,39 +1,35 @@
 #! /usr/bin/env python
 
 # Header
-
 '''
- NAME:                contours_4_python
+:Despription:         Displays a contour plot labeled with astronomical coordinates
 
- DESCRIPTION:         Displays a contour plot labeled with astronomical coordinates.
-
- EXECUTION COMMAND:
+:Execute:
                       >>> python contours_4_python.py
- 
- INPUTS:              FITS file: input_data.fits
-                    
- OUTPUTS:             PDF file: python_plot.pdf
 
+:Inputs:              u9w10107m_drz.fits
 
- AUTHOR:              Tommy LE BLANC
-                      Space Telescope Science Institute, USA 
- 
- REVISION HISTORY:
-                      Written by Tommy LE BLANC, JUL 2013. 
+:Outputs:             contours_4.pdf
+
+:Author:              Tommy LE BLANC
+                      Space Telescope Science Institute, USA
+
+:Revisions:
+                      Written by Tommy LE BLANC, JUL 2013.
 '''
 
 # Import necessary modules
-import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
+import numpy as np
 import pyfits as pf
 import pywcsgrid2
 
 # Name the output file
-psname = 'python_plot.ps'
+psName = '../plots/contours_4.pdf'
 
 # Read in image data (extension #1) and header
-image, hdr = pf.getdata('./data/u9w10107m_drz.fits', 1, header=True)
+image, hdr = pf.getdata('../data/u9w10107m_drz.fits', 1, header=True)
 
 # Select subarray and transform from counts/sec to counts
 image = image[600:1400, 200:1400] * 60.
@@ -64,6 +60,7 @@ ax.set_ylabel('DECLINATION')
 
 # Display background image
 im = ax.imshow(data, cmap=cmap, vmax=7.)
+ax.invert_yaxis()
 
 # Calculate contours
 contour_x = np.arange(tam[1])
@@ -77,4 +74,4 @@ colors = ['firebrick', 'darkred', 'red']
 cnt = plt.contour(contour_x, contour_y, data, colors=colors, levels=levels)
 
 # Save figure
-fig.savefig(psname, orientation='landscape')
+fig.savefig(psName)

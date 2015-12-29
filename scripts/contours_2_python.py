@@ -1,25 +1,21 @@
 #! /usr/bin/env python
 
 # Header
-
 '''
- NAME:                contours_2_python
+:Despription:         Displays a filled contour plot and a color bar.
 
- DESCRIPTION:         Displays a filled contour plot and a color bar.
-
- EXECUTION COMMAND:
+:Execute:
                       >>> python contours_2_python.py
- 
- INPUTS:              FITS file: input_data.fits
-                    
- OUTPUTS:             PDF file: python_plot.pdf
 
+:Inputs:              input_data.fits
 
- AUTHOR:              Tommy LE BLANC
-                      Space Telescope Science Institute, USA 
- 
- REVISION HISTORY:
-                      Written by Tommy LE BLANC, JUL 2013. 
+:Outputs:             contours_2.pdf
+
+:Author:              Tommy LE BLANC
+                      Space Telescope Science Institute, USA
+
+:Revisions:
+                      Written by Tommy LE BLANC, JUL 2013.
 '''
 
 # Import necessary modules
@@ -30,18 +26,17 @@ import matplotlib.cm as cm
 from mpl_toolkits.axes_grid1 import ImageGrid
 
 # Name the output file
-psname = 'python_plot.ps'
+psname = '../plots/contours_2.pdf'
 
 # Read input data from FITS file
-z = pf.getdata('./data/input_data.fits', 0)
+z = pf.getdata('../data/input_data.fits', 0)
 
 # Define x and y labels
 x = np.arange(50) + 100.
 y = np.arange(50) + 10.
 
 # Set colomap
-#cmap = cm.get_cmap('jet')
-cmap = cm.jet
+cmap = cm.get_cmap('jet')
 
 # Setup contour levels
 levels = np.arange(13)
