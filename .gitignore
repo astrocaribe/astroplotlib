@@ -1,0 +1,20 @@
+# Pesky Mac OS X .DS_Store files
+.DS_Store
+
+# iPython Notebook checkpoints
+.ipynb_checkpoints/*.ipynb
+
+# Misc files
+build/*
+
+# Data files
+data/*
+
+# Environment setup files
+.env
+
+
+# Temporary ignores
+colorbar_sample.ipynb
+ifu_project.py
+image_plots.ipynb
