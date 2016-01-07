@@ -15,6 +15,4 @@ data/*
 
 
 # Temporary ignores
-colorbar_sample.ipynb
 ifu_project.py
-image_plots.ipynb
