@@ -17,7 +17,7 @@ There are three ways to view the scripts in this repo for your perusal:
 
 3. Alternatively, the notebooks can be viewed, but not executed, within GitHub directly. This way, there is nothing to install and execute, no data necessary to download, but still gives you the ability to follow along w/ how to produce your favourite plot! I have provided links in the `Structure` section of the README below, or just view directly in the GitHub repo! No fuss, no muss!
 
-#### Disclaimer:
+## Data
 The only missing piece in this repo is the actual data. The reason is an unfortunate, but a very reasonable one: GitHub does not allow file size greater than 100MB. Please refer to the [GitHub Help](https://help.github.com/articles/working-with-large-files/) pages for the very sensible reason for the file size limit restriction.
 
 To obtain the data necessary to execute there scripts, they are currently freely available at the [STScI Astroplotlib]() site; select the plot type, choose the plot, and click on the `download plot` link. The data will be included in the .zip file.
@@ -25,7 +25,7 @@ To obtain the data necessary to execute there scripts, they are currently freely
 ## Plots
 The following type of plots are currently represented in this repo, with more to come in the future:
 
-- [Simple Plots](https://github.com/astrocaribe/astroplotlib/blob/master/notebooks/simple%20plot.ipynb) -
+- [Simple Plots](https://github.com/astrocaribe/astroplotlib/blob/master/notebooks/simple_plot.ipynb) -
   Simple plots including random points along a line, to stellar relationships using different colours, symbols, and even opacity.
 - [Histograms](https://github.com/astrocaribe/astroplotlib/blob/master/notebooks/histograms.ipynb) -
   From traditional, simple outline histograms, to multi-colour and orientation varieties. Also includes a bar plot template with labels, and a scatter plot/histogram combo example.
@@ -35,17 +35,19 @@ The following type of plots are currently represented in this repo, with more to
   Plot spectral information (modeled stellar energy distributions (or SEDs)), along with accompanied image for comparison.
 - [Contour Plots](https://github.com/astrocaribe/astroplotlib/blob/master/notebooks/contours.ipynb) -
   Plots of `heat maps`, of sort. Analyse the composition and concentration of gas in an image, for example. View contour values, with simple plot axes, as well as astronomical coordinates for your plots.
+- [Image Plots](https://github.com/astrocaribe/astroplotlib/blob/master/notebooks/image_plots.ipynb) -
+  Plot images, insets, use colour tables, and plot telescope instrument footprints.
 
 ## Revision History:
 Notes on revisions and/or additions to scripts and notebooks in this repo.
 
-* 1.0, Dec 2012, Jul 2013  
+* 1.0, Dec 2012, Jul 2013
 Original creation of scripts
 
-* 1.1, Dec 2015  
+* 1.1, Dec 2015
 Cleanup and light optimization of scripts, as well as compatibility updates.
 
 
 
 ## Footnotes:
-1. Your milage may vary. Please refer to the [Jupyter Notebook](http://jupyter.org/) website for installation instructions.
+1. Your milage may vary. Please refer to the [Jupyter Notebook](http://jupyter.org/) website for installation instructions. For those familiar with IPython notebook, Jupyter notebook is its current evolution.
